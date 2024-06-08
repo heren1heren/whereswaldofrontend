@@ -1,4 +1,42 @@
-body {
-  background: #0d1117;
-  color: white;
+@import "~bootstrap/scss/bootstrap";
+main {
+}
+.level-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.level-grid-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.2em;
+    border: solid black 1px;
+    text-align: center;
+    text-decoration: none;
+}
+.img-template {
+    background-color: blueviolet;
+    height: 160px;
+    width: 90;
+}
+.interactImage {
+    cursor: pointer;
+}
+.interact-container {
+    position: relative;
+}
+.circle {
+    border: solid black 1px;
+
+    position: absolute;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+.box {
+    background-color: wheat;
+    position: absolute;
+    border: solid black 1px;
+    width: 100px;
+    height: 100px;
 }
