@@ -1,5 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
-main {
+img {
+    width: 100%;
 }
 .level-grid {
     display: grid;
@@ -34,9 +35,26 @@ main {
     width: 40px;
 }
 .box {
-    background-color: wheat;
     position: absolute;
     border: solid black 1px;
+    border-radius: 0.2em;
     width: 100px;
-    height: 100px;
+}
+.correct-circle {
+    border: solid green 3px;
+}
+
+.wrong-circle {
+    border: solid red 3px;
+}
+.modal {
+    background: rgb(128, 128, 128, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
 }

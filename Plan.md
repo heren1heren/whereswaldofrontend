@@ -1,14 +1,16 @@
 _todo_
-creating onCLick event handler that pop up a dialog to choose targets of the clicked areat
+re-organizing code
+
+-> Writing test
+/
+/
+
+/
+/
+
+start to work on zoom in mouse-over event
 _plan_
 home page:
-
-<!-- contains nav bar: links to record -->
-
-<!-- contains footer: made by cookie turtle and a link to my github -->
-
-     contains main section:
-         contains links and images of each levels -> redirect to  seperate game page
 
 game Page:
 contains scoring and timer sections
@@ -20,8 +22,16 @@ contains scoring and timer sections
       ...
 
 after players finish game -> let them fill there name inside the record
+_feature_:
+zoom in mouse move event
+
+    How to get the position (coordinates) of the mouse pointer while hovering over the image?
+    How to extract the part of the image around a given position?
+    How to display the extracted part of the image in a separate box?
+    How to show the cursor of the bounds over the image?
 
 _Problem_
+
 how to link image local source to img tags?
 try: storing image inside database
 then creating get api to these images

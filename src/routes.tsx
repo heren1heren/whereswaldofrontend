@@ -1,13 +1,17 @@
-import App, { ErrorPage, GamePage } from './router-template';
-
+import App, { ErrorPage } from './router-template';
+import { GamePage } from './components/GamePage';
+import { Record } from './components/RecordPage';
 const routes = [
-  // should using Outlet for App element with gamePage children
+  // Only call app when using outlet
   {
     path: '/',
     element: <App />,
     errorElement: <ErrorPage />,
   },
-
+  {
+    path: 'records',
+    element: <Record />,
+  },
   {
     path: 'map1', // new element
     element: <GamePage title="The gold" imageUrl="src/assets/theGold.jpg" />,
