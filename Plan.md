@@ -1,27 +1,11 @@
 _todo_
-re-organizing code
 
--> Writing test
-/
-/
+mock fetching machninism (isloading,....) by set time out
 
-/
-/
-
-start to work on zoom in mouse-over event
+start working on Clock component
+start working on zoom in mouse-over event
 _plan_
-home page:
 
-game Page:
-contains scoring and timer sections
-
-    contains an image inside a container that is clickable:
-      contains  an click event listener  inside the image
-      after click: pop up a options container to choose & circling the clicked area
-       if click out side -> pop down the options container
-      ...
-
-after players finish game -> let them fill there name inside the record
 _feature_:
 zoom in mouse move event
 

@@ -1,0 +1,290 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`initializing record page  > init 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class=" d-flex  flex-column justify-content-between vh-100 text-center"
+      >
+        <h1>
+          Record
+        </h1>
+        <nav
+          class="nav justify-content-center  "
+        >
+          <a
+            class="nav-link "
+            href="/records"
+          >
+             
+            Record
+          </a>
+          <a
+            class="nav-link "
+            href="/"
+          >
+             
+            Home Page
+          </a>
+        </nav>
+        <main
+          class=" flex-grow-1 p-lg-4"
+        >
+           
+           
+          <div
+            class="table-responsive"
+          >
+            <table
+              class="table table-primary"
+            >
+              <thead>
+                <tr>
+                  <th
+                    scope="col"
+                  >
+                    Rank
+                  </th>
+                  <th
+                    scope="col"
+                  >
+                    Username
+                  </th>
+                  <th
+                    scope="col"
+                  >
+                    Time
+                  </th>
+                  <th
+                    scope="col"
+                  >
+                     Level
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  class=""
+                >
+                  <td
+                    scope="row"
+                  >
+                    1
+                  </td>
+                  <td>
+                    noname
+                  </td>
+                  <td>
+                    00:00:00
+                  </td>
+                  <td>
+                    The Space
+                  </td>
+                </tr>
+                <tr
+                  class=""
+                >
+                  <td
+                    scope="row"
+                  >
+                    2
+                  </td>
+                  <td>
+                    Grass
+                  </td>
+                  <td>
+                    00:00:01
+                  </td>
+                  <td>
+                    The Maze
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </main>
+        <footer
+          class=" text-center bg-black text-white"
+        >
+           
+          Made By
+          <a
+            class=" ms-md-1  text-decoration-none"
+            href="https://github.com/heren1heren/whereswaldofrontend"
+          >
+            Cookie Turtle
+          </a>
+        </footer>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class=" d-flex  flex-column justify-content-between vh-100 text-center"
+    >
+      <h1>
+        Record
+      </h1>
+      <nav
+        class="nav justify-content-center  "
+      >
+        <a
+          class="nav-link "
+          href="/records"
+        >
+           
+          Record
+        </a>
+        <a
+          class="nav-link "
+          href="/"
+        >
+           
+          Home Page
+        </a>
+      </nav>
+      <main
+        class=" flex-grow-1 p-lg-4"
+      >
+         
+         
+        <div
+          class="table-responsive"
+        >
+          <table
+            class="table table-primary"
+          >
+            <thead>
+              <tr>
+                <th
+                  scope="col"
+                >
+                  Rank
+                </th>
+                <th
+                  scope="col"
+                >
+                  Username
+                </th>
+                <th
+                  scope="col"
+                >
+                  Time
+                </th>
+                <th
+                  scope="col"
+                >
+                   Level
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class=""
+              >
+                <td
+                  scope="row"
+                >
+                  1
+                </td>
+                <td>
+                  noname
+                </td>
+                <td>
+                  00:00:00
+                </td>
+                <td>
+                  The Space
+                </td>
+              </tr>
+              <tr
+                class=""
+              >
+                <td
+                  scope="row"
+                >
+                  2
+                </td>
+                <td>
+                  Grass
+                </td>
+                <td>
+                  00:00:01
+                </td>
+                <td>
+                  The Maze
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+      <footer
+        class=" text-center bg-black text-white"
+      >
+         
+        Made By
+        <a
+          class=" ms-md-1  text-decoration-none"
+          href="https://github.com/heren1heren/whereswaldofrontend"
+        >
+          Cookie Turtle
+        </a>
+      </footer>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

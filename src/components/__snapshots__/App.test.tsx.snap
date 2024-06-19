@@ -1,0 +1,296 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`initializing home page test  > init 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class=" d-flex  flex-column justify-content-between vh-100 text-center"
+      >
+        <h1>
+          where is waldo
+        </h1>
+        <nav
+          class="nav justify-content-center  "
+        >
+          <a
+            class="nav-link "
+            href="/records"
+          >
+             
+            Record
+          </a>
+          <a
+            class="nav-link "
+            href="/"
+          >
+             
+            Home Page
+          </a>
+        </nav>
+        <main
+          class=" flex-grow-1 p-lg-4"
+        >
+           
+           
+          <p>
+            Choose a level:
+          </p>
+          <div
+            class="level-grid h-75"
+          >
+            <a
+              class="level-grid-item"
+              href="/map1"
+            >
+              <img
+                alt="where is waldo image"
+                class="img-template"
+                src="src/assets/theGold.jpg"
+              />
+              The Gold
+            </a>
+            <a
+              class="level-grid-item"
+              href="/map2"
+            >
+              <img
+                alt="where is waldo image"
+                class="img-template"
+                src="src/assets/beach.jpg"
+              />
+              The beach
+            </a>
+            <a
+              class="level-grid-item"
+              href="/map3"
+            >
+              <img
+                alt="where is waldo image"
+                class="img-template"
+                src="src/assets/blue.jpg"
+              />
+              The Blue
+            </a>
+            <a
+              class="level-grid-item"
+              href="/map4"
+            >
+              <img
+                alt="where is waldo image"
+                class="img-template"
+                src="src/assets/maze.jpg"
+              />
+              The Maze
+            </a>
+            <a
+              class="level-grid-item"
+              href="/map5"
+            >
+              <img
+                alt="where is waldo image"
+                class="img-template"
+                src="src/assets/snowMountain.jpg"
+              />
+              The White
+            </a>
+            <a
+              class="level-grid-item"
+              href="/map6"
+            >
+              <img
+                alt="where is waldo image"
+                class="img-template"
+                src="src/assets/space.jpg"
+              />
+              The Space
+            </a>
+          </div>
+        </main>
+        <footer
+          class=" text-center bg-black text-white"
+        >
+           
+          Made By
+          <a
+            class=" ms-md-1  text-decoration-none"
+            href="https://github.com/heren1heren/whereswaldofrontend"
+          >
+            Cookie Turtle
+          </a>
+        </footer>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class=" d-flex  flex-column justify-content-between vh-100 text-center"
+    >
+      <h1>
+        where is waldo
+      </h1>
+      <nav
+        class="nav justify-content-center  "
+      >
+        <a
+          class="nav-link "
+          href="/records"
+        >
+           
+          Record
+        </a>
+        <a
+          class="nav-link "
+          href="/"
+        >
+           
+          Home Page
+        </a>
+      </nav>
+      <main
+        class=" flex-grow-1 p-lg-4"
+      >
+         
+         
+        <p>
+          Choose a level:
+        </p>
+        <div
+          class="level-grid h-75"
+        >
+          <a
+            class="level-grid-item"
+            href="/map1"
+          >
+            <img
+              alt="where is waldo image"
+              class="img-template"
+              src="src/assets/theGold.jpg"
+            />
+            The Gold
+          </a>
+          <a
+            class="level-grid-item"
+            href="/map2"
+          >
+            <img
+              alt="where is waldo image"
+              class="img-template"
+              src="src/assets/beach.jpg"
+            />
+            The beach
+          </a>
+          <a
+            class="level-grid-item"
+            href="/map3"
+          >
+            <img
+              alt="where is waldo image"
+              class="img-template"
+              src="src/assets/blue.jpg"
+            />
+            The Blue
+          </a>
+          <a
+            class="level-grid-item"
+            href="/map4"
+          >
+            <img
+              alt="where is waldo image"
+              class="img-template"
+              src="src/assets/maze.jpg"
+            />
+            The Maze
+          </a>
+          <a
+            class="level-grid-item"
+            href="/map5"
+          >
+            <img
+              alt="where is waldo image"
+              class="img-template"
+              src="src/assets/snowMountain.jpg"
+            />
+            The White
+          </a>
+          <a
+            class="level-grid-item"
+            href="/map6"
+          >
+            <img
+              alt="where is waldo image"
+              class="img-template"
+              src="src/assets/space.jpg"
+            />
+            The Space
+          </a>
+        </div>
+      </main>
+      <footer
+        class=" text-center bg-black text-white"
+      >
+         
+        Made By
+        <a
+          class=" ms-md-1  text-decoration-none"
+          href="https://github.com/heren1heren/whereswaldofrontend"
+        >
+          Cookie Turtle
+        </a>
+      </footer>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

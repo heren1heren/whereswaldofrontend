@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom';
 import { normalizingCoordinate } from '../util';
 import { isContained } from '../util';
 import { GamePageProps, ClockProps } from '../typeDeclaration';
-// should get a whole Game page component file
+
 export const Clock: FC<ClockProps> = () => {
   // trigger count up from back end and at the same time run this Clock
   //todo : make a count up
@@ -15,27 +15,34 @@ export const Clock: FC<ClockProps> = () => {
 };
 
 export const GamePage: FC<GamePageProps> = ({ title, imageUrl }) => {
+  //states
+  const ref = useRef<HTMLImageElement>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const ref = useRef(null);
   const [isEnded, setIsEnded] = useState(false);
   const [isNavigate, setIsNavigate] = useState(false);
   const [isAnswerDisplay, setIsAnswerDisplay] = useState(false);
   const [isAnswer, setIsAnswer] = useState<boolean>();
   const [coordinate, setCoordinate] = useState<number[]>();
   const [containerSize, setContainerSize] = useState<number[]>([]);
-  const [circleCoordinate, setCircleCoordinate] = useState<number[]>(); // this can be calculated from coordinate
   const [isDisplay, setIsDisplay] = useState(false);
-  const [boxCoordinate, setBoxCoordinate] = useState<number[]>(); // this can be calculated from coordinate
+  //variables
   const array = [
     330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344,
     345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359,
     360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370,
   ];
+  const boxCoordinates = [];
+  const circleCoordinates = [];
+  if (coordinate) {
+    boxCoordinates.push(coordinate[0] + 40, coordinate[1] - 80);
+
+    circleCoordinates.push(coordinate[0] - 10, coordinate[1] - 10);
+  }
 
   useEffect(() => {
     // need to wait after the image is finished load
     // need to handle loading state
-    if (!isLoading)
+    if (!isLoading && ref.current)
       setContainerSize([ref.current.clientWidth, ref.current.clientHeight]);
   }, [isLoading]);
 
@@ -50,11 +57,7 @@ export const GamePage: FC<GamePageProps> = ({ title, imageUrl }) => {
     );
     console.log(` normalized coordinate: ${correctCoordinate}`);
     setCoordinate(correctCoordinate);
-    setCircleCoordinate([
-      e.nativeEvent.offsetX - 10,
-      e.nativeEvent.offsetY - 10,
-    ]);
-    setBoxCoordinate([e.nativeEvent.offsetX + 40, e.nativeEvent.offsetY - 80]);
+
     setIsDisplay((state) => !state);
     setIsAnswerDisplay(false);
   };
@@ -77,7 +80,7 @@ export const GamePage: FC<GamePageProps> = ({ title, imageUrl }) => {
   };
   if (isNavigate) return <Navigate to="/records" />;
   return (
-    <Layout title={title} haveRecord={true}>
+    <Layout title={title}>
       {' '}
       <Clock />
       <div className="interact-container">
@@ -107,23 +110,23 @@ export const GamePage: FC<GamePageProps> = ({ title, imageUrl }) => {
         ) : (
           <></>
         )}
-        {circleCoordinate && isAnswerDisplay ? (
+        {circleCoordinates && isAnswerDisplay ? (
           <div
             className={`circle ${isAnswer ? 'correct-circle' : 'wrong-circle'}`}
-            style={{ left: circleCoordinate[0], top: circleCoordinate[1] }}
+            style={{ left: circleCoordinates[0], top: circleCoordinates[1] }}
           />
         ) : (
           <></>
         )}
-        {isDisplay && circleCoordinate && boxCoordinate ? (
+        {isDisplay && circleCoordinates && boxCoordinates ? (
           <>
             <div
               className="circle"
-              style={{ left: circleCoordinate[0], top: circleCoordinate[1] }}
+              style={{ left: circleCoordinates[0], top: circleCoordinates[1] }}
             ></div>
             <div
               className="box"
-              style={{ left: boxCoordinate[0], top: boxCoordinate[1] }}
+              style={{ left: boxCoordinates[0], top: boxCoordinates[1] }}
             >
               <button className="btn  bg-info-subtle" onClick={handleOnChoose}>
                 {' '}

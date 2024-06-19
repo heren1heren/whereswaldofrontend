@@ -5,7 +5,7 @@ import { Layout } from './components/Layout';
 
 const App = () => {
   return (
-    <Layout haveRecord={true} title={'where is waldo'}>
+    <Layout title={'where is waldo'}>
       {' '}
       <p>Choose a level:</p>
       <div className="level-grid h-75">
