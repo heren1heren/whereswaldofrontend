@@ -1,58 +1,61 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './index.scss';
+import axios from 'axios';
 import { Layout } from './components/Layout';
-
+import { nanoid } from 'nanoid';
 const App = () => {
+  // fetch images from backend
+  const id = nanoid();
   return (
     <Layout title={'where is waldo'}>
       {' '}
       <p>Choose a level:</p>
       <div className="level-grid h-75">
-        <Link className="level-grid-item" to="map1">
+        <Link className="level-grid-item" to={`gold/${id}`}>
           <img
             className="img-template"
-            src="src/assets/theGold.jpg"
+            src="http://localhost:3000/images/gold.jpg"
             alt="where is waldo image"
           />
           The Gold
         </Link>
-        <Link className="level-grid-item" to="map2">
+        <Link className="level-grid-item" to={`beach/${id}`}>
           <img
             className="img-template"
-            src="src/assets/beach.jpg"
+            src="http://localhost:3000/images/beach.jpg"
             alt="where is waldo image"
           />
           The beach
         </Link>
-        <Link className="level-grid-item" to="map3">
+        <Link className="level-grid-item" to={`blue/${id}`}>
           <img
             className="img-template"
-            src="src/assets/blue.jpg"
+            src="http://localhost:3000/images/blue.jpg"
             alt="where is waldo image"
           />
           The Blue
         </Link>
-        <Link className="level-grid-item" to="map4">
+        <Link className="level-grid-item" to={`maze/${id}`}>
           <img
             className="img-template"
-            src="src/assets/maze.jpg"
+            src="http://localhost:3000/images/maze.jpg"
             alt="where is waldo image"
           />
           The Maze
         </Link>
-        <Link className="level-grid-item" to="map5">
+        <Link className="level-grid-item" to={`white/${id}`}>
           <img
             className="img-template"
-            src="src/assets/snowMountain.jpg"
+            src="http://localhost:3000/images/white.jpg"
             alt="where is waldo image"
           />
           The White
         </Link>
-        <Link className="level-grid-item" to="map6">
+        <Link className="level-grid-item" to={`space/${id}`}>
           <img
             className="img-template"
-            src="src/assets/space.jpg"
+            src="http://localhost:3000/images/space.jpg"
             alt="where is waldo image"
           />
           The Space

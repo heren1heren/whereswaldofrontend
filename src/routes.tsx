@@ -13,30 +13,58 @@ const routes = [
     element: <Record />,
   },
   {
-    path: 'map1', // new element
-    element: <GamePage title="The gold" imageUrl="src/assets/theGold.jpg" />,
-  },
-  {
-    path: 'map2', // the beach
-    element: <GamePage title="The beach" imageUrl="src/assets/beach.jpg" />,
-  },
-  {
-    path: 'map3', // the blue
-    element: <GamePage title="The blue" imageUrl="src/assets/blue.jpg" />,
-  },
-  {
-    path: 'map4', // the maze
-    element: <GamePage title="The maze" imageUrl="src/assets/maze.jpg" />,
-  },
-  {
-    path: 'map5', // the white
+    path: 'gold/:id', // new element
     element: (
-      <GamePage title="The White" imageUrl="src/assets/snowMountain.jpg" />
+      <GamePage
+        title="The gold"
+        imageUrl="http://localhost:3000/images/gold.jpg"
+      />
     ),
   },
   {
-    path: 'map6', // the space
-    element: <GamePage title="The Space" imageUrl="src/assets/space.jpg" />,
+    path: 'beach/:id', // the beach
+    element: (
+      <GamePage
+        title="The beach"
+        imageUrl="http://localhost:3000/images/maze.jpg"
+      />
+    ),
+  },
+  {
+    path: 'blue/:id', // the blue
+    element: (
+      <GamePage
+        title="The blue"
+        imageUrl="http://localhost:3000/images/blue.jpg"
+      />
+    ),
+  },
+  {
+    path: 'maze/:id', // the maze
+    element: (
+      <GamePage
+        title="The maze"
+        imageUrl="http://localhost:3000/images/maze.jpg"
+      />
+    ),
+  },
+  {
+    path: 'white/:id', // the white
+    element: (
+      <GamePage
+        title="The White"
+        imageUrl="http://localhost:3000/images/white.jpg"
+      />
+    ),
+  },
+  {
+    path: 'space/:id', // the space
+    element: (
+      <GamePage
+        title="The Space"
+        imageUrl="http://localhost:3000/images/space.jpg"
+      />
+    ),
   },
 ];
 export default routes;

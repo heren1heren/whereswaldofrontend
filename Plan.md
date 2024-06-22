@@ -1,8 +1,11 @@
 _todo_
+giving url an id to communicate with backend inside a link
 
-mock fetching machninism (isloading,....) by set time out
+<!-- implementing count up clock component from front end -->
 
-start working on Clock component
+mock fetching machninism (isloading,....) by set time out for game page and home page
+
+//
 start working on zoom in mouse-over event
 _plan_
 
@@ -15,10 +18,6 @@ zoom in mouse move event
     How to show the cursor of the bounds over the image?
 
 _Problem_
-
-how to link image local source to img tags?
-try: storing image inside database
-then creating get api to these images
 
 Pixels coordinates need to by synchornized between different srceen size and different zoom size
 trying-solutions: normalizing pixels coordinate based on how currently big is the image on the screen based on pixels

@@ -7,11 +7,26 @@ import { GamePageProps, ClockProps } from '../typeDeclaration';
 
 export const Clock: FC<ClockProps> = () => {
   // trigger count up from back end and at the same time run this Clock
-  //todo : make a count up
-  /**
-   *
-   */
-  return <div className=" fs-3"> 00:00:00</div>;
+
+  const [miliSeconds, setMiliSeconds] = useState(0);
+
+  useEffect(() => {
+    const key = setInterval(() => {
+      setMiliSeconds((miliSeconds) => miliSeconds + 1);
+    }, 1000 / 60);
+
+    return () => {
+      clearInterval(key);
+    };
+  }, []);
+
+  return (
+    <div className=" fs-3">
+      {' '}
+      {Math.round((miliSeconds / 3600) % 60)}:
+      {Math.round((miliSeconds / 60) % 60)}:{miliSeconds % 60}
+    </div>
+  );
 };
 
 export const GamePage: FC<GamePageProps> = ({ title, imageUrl }) => {
@@ -26,6 +41,24 @@ export const GamePage: FC<GamePageProps> = ({ title, imageUrl }) => {
   const [containerSize, setContainerSize] = useState<number[]>([]);
   const [isDisplay, setIsDisplay] = useState(false);
   //variables
+  // fetch coordinate depends on title props
+  switch (title) {
+    case 'the blue':
+      break;
+    case 'the white':
+      break;
+    case 'the space':
+      break;
+    case 'the gold':
+      break;
+    case 'the maze':
+      break;
+    case 'the beach':
+      break;
+
+    default:
+      break;
+  }
   const array = [
     330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344,
     345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359,
@@ -35,7 +68,6 @@ export const GamePage: FC<GamePageProps> = ({ title, imageUrl }) => {
   const circleCoordinates = [];
   if (coordinate) {
     boxCoordinates.push(coordinate[0] + 40, coordinate[1] - 80);
-
     circleCoordinates.push(coordinate[0] - 10, coordinate[1] - 10);
   }
 

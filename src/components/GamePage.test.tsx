@@ -8,7 +8,8 @@ describe('initializing test ', () => {
     expect(GamePage).toMatchSnapshot();
     expect(screen.getByRole('link', { name: 'text' }).toBeInTheDocument());
   });
-  // it ('gamepage render correctly with image')
+  // it ('gamepage render correctly with image') from backend
   // it('gamepage contains image that can be interacted and can be measured corrected')
-  //
+
+  //*userevent inside the game page component
 });
