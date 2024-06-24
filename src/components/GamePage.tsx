@@ -31,7 +31,7 @@ export const GamePage: FC<GamePageProps> = ({ title, imageUrl }) => {
   } = useFetch('http://localhost:3000/coordinates', title);
 
   const { errors: startRecordErrors } = useStartRecord(
-    `http://localhost:3000/startRecordPost/`,
+    `http://localhost:3000/startRecord`,
     {
       map: title,
       id: params.id,
@@ -78,7 +78,7 @@ export const GamePage: FC<GamePageProps> = ({ title, imageUrl }) => {
       setIsAnswerDisplay(true);
 
       (async () => {
-        await axios.put('http://localhost:3000/endRecordPut', {
+        await axios.put('http://localhost:3000/endRecord', {
           id: params.id,
         });
       })();
@@ -99,7 +99,7 @@ export const GamePage: FC<GamePageProps> = ({ title, imageUrl }) => {
 
     (async () => {
       try {
-        await axios.put('http://localhost:3000/usernameRecordPut', {
+        await axios.put('http://localhost:3000/usernameRecord', {
           username: input,
           id: params.id,
         });
