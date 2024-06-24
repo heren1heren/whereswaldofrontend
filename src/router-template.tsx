@@ -1,99 +1,78 @@
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
-export const Popeye = () => {
-  return (
-    <>
-      <p>Hi, I am Popeye! I love to eat Spinach!</p>
-      <Link to="/">Click here to go back</Link>
-    </>
-  );
-};
-export const Spinach = () => {
-  return (
-    <>
-      <p>Hi, I am Spinach! Popeye loves to eat me!</p>
-      <Link to="/">Click here to go back</Link>
-    </>
-  );
-};
+import './index.scss';
+
+import { Layout } from './components/Layout';
+import { nanoid, random } from 'nanoid';
+
 const App = () => {
+  const id = nanoid();
   return (
-    <div>
-      <h1>Hello from the main page of the app!</h1>
-      <p>Here are some examples of links to other pages</p>
-      <nav>
-        <ul>
-          <li>
-            <Link to="profile">Profile page</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  );
-};
-export const DefaultProfile = () => {
-  return <p>Oh, nothing to see here!</p>;
-};
-export const ErrorPage = () => {
-  return (
-    <div>
-      <h1>Oh no, this route doesn&apos;t exist!</h1>
-      <Link to="/">
-        You can go back to the home page by clicking here, though!
-      </Link>
-    </div>
-  );
-};
-export const DefaultProfilePage = () => {
-  return (
-    <div>
-      <h1>Hello from profile page!</h1>
-      <p>So, how are you?</p>
-      <hr />
-      <h2>The profile visited is here:</h2>
-      {/* <Outlet /> */}
-
-      <DefaultProfile />
-    </div>
-  );
-};
-export const Profile = () => {
-  const { name } = useParams();
-  console.log(name);
-  return (
-    <div>
-      <h1>Hello from profile page!</h1>
-      <p>So, how are you?</p>
-      <hr />
-      <h2>The profile visited is here:</h2>
-      {/* <Outlet /> */}
-      {name === 'popeye' ? (
-        <Popeye />
-      ) : name === 'spinach' ? (
-        <Spinach />
-      ) : (
-        <DefaultProfile />
-      )}
-
-      <div>
-        {' '}
-        navigation:
-        <div>
-          <Link to="http://localhost:5173/profile/spinach">
-            go to spinach page
-          </Link>
-        </div>
-        <div>
-          <Link to="http://localhost:5173/profile/popeye">
-            go to popeye page
-          </Link>
-        </div>
+    <Layout title={'where is waldo'}>
+      {' '}
+      <p>Choose a level:</p>
+      <div className="level-grid h-75">
+        <Link className="level-grid-item" to={`gold/${id}`}>
+          <img
+            className="img-template"
+            src="http://localhost:3000/images/gold.jpg"
+            alt="where is waldo image"
+          />
+          The Gold
+        </Link>
+        <Link className="level-grid-item" to={`beach/${id}`}>
+          <img
+            className="img-template"
+            src="http://localhost:3000/images/beach.jpg"
+            alt="where is waldo image"
+          />
+          The beach
+        </Link>
+        <Link className="level-grid-item" to={`blue/${id}`}>
+          <img
+            className="img-template"
+            src="http://localhost:3000/images/blue.jpg"
+            alt="where is waldo image"
+          />
+          The Blue
+        </Link>
+        <Link className="level-grid-item" to={`maze/${id}`}>
+          <img
+            className="img-template"
+            src="http://localhost:3000/images/maze.jpg"
+            alt="where is waldo image"
+          />
+          The Maze
+        </Link>
+        <Link className="level-grid-item" to={`white/${id}`}>
+          <img
+            className="img-template"
+            src="http://localhost:3000/images/white.jpg"
+            alt="where is waldo image"
+          />
+          The White
+        </Link>
+        <Link className="level-grid-item" to={`space/${id}`}>
+          <img
+            className="img-template"
+            src="http://localhost:3000/images/space.jpg"
+            alt="where is waldo image"
+          />
+          The Space
+        </Link>
       </div>
+    </Layout>
+  );
+};
+
+export const ErrorPage: FC = () => {
+  return (
+    <div>
+      {' '}
+      error page.
+      <Link to="/"> Go Back</Link>
     </div>
   );
 };
-export function HomePage() {
-  return <div> I am nothingness</div>;
-}
 
 export default App;
