@@ -1,15 +1,14 @@
 _todo_
-giving url an id to communicate with backend inside a link
+write useDeleteRecord
+write useStartRecord
+refactoring then writing test
 
 <!-- implementing count up clock component from front end -->
 
-mock fetching machninism (isloading,....) by set time out for game page and home page
-
-//
-start working on zoom in mouse-over event
-_plan_
+_laterTodo_
 
 _feature_:
+stop clock when user handleOn choose correctly
 zoom in mouse move event
 
     How to get the position (coordinates) of the mouse pointer while hovering over the image?
@@ -19,5 +18,4 @@ zoom in mouse move event
 
 _Problem_
 
-Pixels coordinates need to by synchornized between different srceen size and different zoom size
-trying-solutions: normalizing pixels coordinate based on how currently big is the image on the screen based on pixels
+switch from gamePage to recordPage through link doesn't work as expected

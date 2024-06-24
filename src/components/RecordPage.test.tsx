@@ -11,5 +11,6 @@ describe('initializing record page ', () => {
     );
     expect(component).toMatchSnapshot();
   });
+  // expect fetching correctly from backend
   // expect data to be display correctly
 });

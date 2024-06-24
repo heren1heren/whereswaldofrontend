@@ -26,7 +26,7 @@ const routes = [
     element: (
       <GamePage
         title="The beach"
-        imageUrl="http://localhost:3000/images/maze.jpg"
+        imageUrl="http://localhost:3000/images/beach.jpg"
       />
     ),
   },

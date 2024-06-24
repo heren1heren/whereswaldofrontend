@@ -1,11 +1,11 @@
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import './index.scss';
-import axios from 'axios';
+
 import { Layout } from './components/Layout';
-import { nanoid } from 'nanoid';
+import { nanoid, random } from 'nanoid';
+
 const App = () => {
-  // fetch images from backend
   const id = nanoid();
   return (
     <Layout title={'where is waldo'}>
