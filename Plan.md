@@ -1,7 +1,7 @@
 _todo_
-refactor GamePage for a test
+
 Layout is ready for a test
-generatingApproximateCoordinate is read for a test file
+generatingApproximateCoordinate is ready for a test file
 useRecordFetch is ready for a test
 useFetch is ready for a test
 useDeleteIncompleteRecords is ready for a test
