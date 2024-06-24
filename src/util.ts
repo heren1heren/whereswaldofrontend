@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { coordinateObject, RecordProps } from './typeDeclaration';
+import { coordinateObject } from './typeDeclaration';
 
 // write test for normalizing Coordinate and other utils
 export function normalizingCoordinate(
@@ -66,14 +66,27 @@ export const useRecordFetch = (url: string) => {
 
         // sort by time from backend
         setData(res.data.records);
-      } catch (error) {
-        if (typeof error === 'string') {
-          setErrors(error);
-        } else if (error.message) {
-          setErrors(error.message);
+      } catch (error: AxiosError | Error) {
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          // console.log(error.response.data);
+          // console.log(error.response.status);
+          // console.log(error.response.headers);
+          setErrors(error.respond);
+        } else if (error.request) {
+          // The request was made but no response was received
+          // `error.request` is an instance of XMLHttpRequest in the
+          // browser and an instance of
+          // http.ClientRequest in node.js
+          console.log(error.request);
+          setErrors(error.request);
         } else {
-          setErrors(error);
+          // Something happened in setting up the request that triggered an Error
+          console.log('Error', error.message);
+          setErrors(error.message);
         }
+        console.log(error.config);
       } finally {
         setIsLoading(false);
       }
@@ -108,8 +121,8 @@ export const useFetch = (url: string, title: string) => {
 
 export const useDeleteIncompleteRecords = (url: string) => {
   //! loop
-  const [errors, setErrors] = useState();
-
+  const [errors, setErrors] = useState<unknown>();
+  const [finish, setFinish] = useState(false);
   useEffect(() => {
     // useEffect should only do one job -> refactor later
     (async () => {
@@ -117,27 +130,26 @@ export const useDeleteIncompleteRecords = (url: string) => {
         await axios.delete(url);
       } catch (error) {
         setErrors(error);
+      } finally {
+        setFinish(true);
       }
     })();
   });
 
-  return { errors };
+  return { errors, finish };
 };
-export const useStartRecord = (url: string) => {
-  const [errors, setErrors] = useState();
-  const [isSuccessful, setIsSuccessful] = useState(false);
+export const useStartRecord = (url: string, data: object) => {
+  const [errors, setErrors] = useState<unknown>();
   useEffect(() => {
     // useEffect should only do one job -> refactor later
     (async () => {
       try {
-        await axios.post(url);
+        await axios.post(url, data);
       } catch (error) {
         setErrors(error);
       }
     })();
-  }, [url]);
-  if (!errors) setIsSuccessful(true);
-  return { errors, isSuccessful };
-};
+  }, [url, data]);
 
-//todo :refactor useEffect to a custom useHook named: useLoading
+  return { errors };
+};

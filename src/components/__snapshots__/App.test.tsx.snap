@@ -42,67 +42,67 @@ exports[`initializing home page test  > init 1`] = `
           >
             <a
               class="level-grid-item"
-              href="/map1"
+              href="/gold/Xl5N1VqpeTgR-avVztH6D"
             >
               <img
                 alt="where is waldo image"
                 class="img-template"
-                src="src/assets/theGold.jpg"
+                src="http://localhost:3000/images/gold.jpg"
               />
               The Gold
             </a>
             <a
               class="level-grid-item"
-              href="/map2"
+              href="/beach/Xl5N1VqpeTgR-avVztH6D"
             >
               <img
                 alt="where is waldo image"
                 class="img-template"
-                src="src/assets/beach.jpg"
+                src="http://localhost:3000/images/beach.jpg"
               />
               The beach
             </a>
             <a
               class="level-grid-item"
-              href="/map3"
+              href="/blue/Xl5N1VqpeTgR-avVztH6D"
             >
               <img
                 alt="where is waldo image"
                 class="img-template"
-                src="src/assets/blue.jpg"
+                src="http://localhost:3000/images/blue.jpg"
               />
               The Blue
             </a>
             <a
               class="level-grid-item"
-              href="/map4"
+              href="/maze/Xl5N1VqpeTgR-avVztH6D"
             >
               <img
                 alt="where is waldo image"
                 class="img-template"
-                src="src/assets/maze.jpg"
+                src="http://localhost:3000/images/maze.jpg"
               />
               The Maze
             </a>
             <a
               class="level-grid-item"
-              href="/map5"
+              href="/white/Xl5N1VqpeTgR-avVztH6D"
             >
               <img
                 alt="where is waldo image"
                 class="img-template"
-                src="src/assets/snowMountain.jpg"
+                src="http://localhost:3000/images/white.jpg"
               />
               The White
             </a>
             <a
               class="level-grid-item"
-              href="/map6"
+              href="/space/Xl5N1VqpeTgR-avVztH6D"
             >
               <img
                 alt="where is waldo image"
                 class="img-template"
-                src="src/assets/space.jpg"
+                src="http://localhost:3000/images/space.jpg"
               />
               The Space
             </a>
@@ -161,67 +161,67 @@ exports[`initializing home page test  > init 1`] = `
         >
           <a
             class="level-grid-item"
-            href="/map1"
+            href="/gold/Xl5N1VqpeTgR-avVztH6D"
           >
             <img
               alt="where is waldo image"
               class="img-template"
-              src="src/assets/theGold.jpg"
+              src="http://localhost:3000/images/gold.jpg"
             />
             The Gold
           </a>
           <a
             class="level-grid-item"
-            href="/map2"
+            href="/beach/Xl5N1VqpeTgR-avVztH6D"
           >
             <img
               alt="where is waldo image"
               class="img-template"
-              src="src/assets/beach.jpg"
+              src="http://localhost:3000/images/beach.jpg"
             />
             The beach
           </a>
           <a
             class="level-grid-item"
-            href="/map3"
+            href="/blue/Xl5N1VqpeTgR-avVztH6D"
           >
             <img
               alt="where is waldo image"
               class="img-template"
-              src="src/assets/blue.jpg"
+              src="http://localhost:3000/images/blue.jpg"
             />
             The Blue
           </a>
           <a
             class="level-grid-item"
-            href="/map4"
+            href="/maze/Xl5N1VqpeTgR-avVztH6D"
           >
             <img
               alt="where is waldo image"
               class="img-template"
-              src="src/assets/maze.jpg"
+              src="http://localhost:3000/images/maze.jpg"
             />
             The Maze
           </a>
           <a
             class="level-grid-item"
-            href="/map5"
+            href="/white/Xl5N1VqpeTgR-avVztH6D"
           >
             <img
               alt="where is waldo image"
               class="img-template"
-              src="src/assets/snowMountain.jpg"
+              src="http://localhost:3000/images/white.jpg"
             />
             The White
           </a>
           <a
             class="level-grid-item"
-            href="/map6"
+            href="/space/Xl5N1VqpeTgR-avVztH6D"
           >
             <img
               alt="where is waldo image"
               class="img-template"
-              src="src/assets/space.jpg"
+              src="http://localhost:3000/images/space.jpg"
             />
             The Space
           </a>

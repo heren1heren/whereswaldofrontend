@@ -1,7 +1,13 @@
 _todo_
-write useDeleteRecord
-write useStartRecord
-refactoring then writing test
+refactor GamePage for a test
+Layout is ready for a test
+generatingApproximateCoordinate is read for a test file
+useRecordFetch is ready for a test
+useFetch is ready for a test
+useDeleteIncompleteRecords is ready for a test
+useStartRecord is ready for a test
+Record Page is ready for a test file
+Clock component is ready for a test file
 
 <!-- implementing count up clock component from front end -->
 
@@ -17,5 +23,3 @@ zoom in mouse move event
     How to show the cursor of the bounds over the image?
 
 _Problem_
-
-switch from gamePage to recordPage through link doesn't work as expected

@@ -1,3 +1,8 @@
+describe('initializing test ', () => {
+  it('init', () => {
+    expect(0).toBe(0);
+  });
+});
 //* userevent
 // describe("App component", () => {
 //   it("renders magnificent monkeys", () => {

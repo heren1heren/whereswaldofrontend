@@ -1,32 +1,19 @@
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import { Layout } from './Layout';
 
-import { RecordProps } from '../typeDeclaration';
-import axios from 'axios';
-import {
-  useDeleteIncompleteRecords,
-  usePageLoaded,
-  useRecordFetch,
-} from '../util';
-type recordType = {
-  username: string;
-  map: string;
-  duration: number;
-  id: string;
-};
+import { RecordProps, recordType } from '../typeDeclaration';
+import { useDeleteIncompleteRecords, useRecordFetch } from '../util';
 export const Record: FC<RecordProps> = () => {
-  // fetch inside useEffect
-  // const [records, setRecords] = useState<recordType[]>();
-  // const [isLoading, setIsLoading] = useState(true);
+  const { errors: deleteErrors } = useDeleteIncompleteRecords(
+    'http://localhost:3000/deleteIncompleteRecords'
+  );
+
   const {
     isLoading,
     errors,
     data: records,
   } = useRecordFetch('http://localhost:3000/records');
 
-  const { errors: deleteErrors } = useDeleteIncompleteRecords(
-    'http://localhost:3000/deleteIncompleteRecords'
-  );
   if (deleteErrors) return <div>{deleteErrors}</div>;
   if (errors) return <div>{errors}</div>;
   if (isLoading) return <div> ...Loading</div>;
@@ -46,7 +33,6 @@ export const Record: FC<RecordProps> = () => {
           <tbody>
             {records ? (
               records.map((record: recordType, index: number) => {
-                // console.log(record);
                 return (
                   <tr className="" key={Math.random()}>
                     <td scope="row">{index}</td>

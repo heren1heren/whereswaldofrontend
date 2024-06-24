@@ -1,56 +1,49 @@
 import { FC, useEffect, useRef, useState } from 'react';
 import { Layout } from './Layout';
 import { Navigate, useParams } from 'react-router-dom';
-import { generatingApproximateCoordinate, useFetch } from '../util';
+import {
+  generatingApproximateCoordinate,
+  useFetch,
+  useStartRecord,
+} from '../util';
 import { isContained } from '../util';
-import { GamePageProps, coordinateObject } from '../typeDeclaration';
+import { GamePageProps } from '../typeDeclaration';
 import axios from 'axios';
 import { Clock } from './Clock';
 
 export const GamePage: FC<GamePageProps> = ({ title, imageUrl }) => {
   //states
-  //todo refactor
   const params = useParams();
   const [input, setInput] = useState('');
   const ref = useRef<HTMLImageElement>(null);
-
   const [isEnded, setIsEnded] = useState(false);
-  const [isNavigate, setIsNavigate] = useState(false);
   const [isAnswerDisplay, setIsAnswerDisplay] = useState(false);
   const [isAnswer, setIsAnswer] = useState<boolean>();
   const [coordinate, setCoordinate] = useState<number[]>();
   const [containerSize, setContainerSize] = useState<number[]>([]);
   const [isDisplay, setIsDisplay] = useState(false);
-
+  const [isNavigate, setIsNavigate] = useState(false);
+  //custom hook
   const {
     isLoading,
     data: coordinateData,
     errors,
   } = useFetch('http://localhost:3000/coordinates', title);
 
+  const { errors: startRecordErrors } = useStartRecord(
+    `http://localhost:3000/startRecordPost/`,
+    {
+      map: title,
+      id: params.id,
+    }
+  );
+  if (startRecordErrors) console.log(startRecordErrors);
   useEffect(() => {
     if (!isLoading && ref.current)
       setContainerSize([ref.current.clientWidth, ref.current.clientHeight]);
-  }, [isLoading, ref.current?.clientHeight]); // my ref.current is linked to an image
-  // as my understand this useEffect should run again everytime I zoom in or zoom out my website? should it?
-  // because while I zoom in or zoom out my website, my image container's size changes
-  //todo :refactor useEffect to a custom useHook named: useLoading
-  useEffect(() => {
-    // useEffect should only do one job -> refactor later
-    (async () => {
-      try {
-        await axios.delete('http://localhost:3000/deleteIncompleteRecords');
+  }, [isLoading, ref.current?.clientHeight]);
 
-        await axios.post(`http://localhost:3000/startRecordPost/`, {
-          map: title,
-          id: params.id,
-        });
-      } catch (error) {
-        console.log(error);
-      }
-    })();
-  }, [title, isLoading, params.id]);
-  // variables
+  //variable
   let approximateCoordinates: number[] = [];
   const boxCoordinates = [];
   const circleCoordinates = [];
@@ -65,25 +58,25 @@ export const GamePage: FC<GamePageProps> = ({ title, imageUrl }) => {
     );
   }
 
+  //*eventHandler
   const handleOnClick = (e: React.MouseEvent<HTMLElement>) => {
-    console.log(
-      ` click coordinate: ${[e.nativeEvent.offsetX, e.nativeEvent.offsetY]}`
-    );
+    // console.log(
+    //   ` click coordinate: ${[e.nativeEvent.offsetX, e.nativeEvent.offsetY]}`
+    // );
     setCoordinate([e.nativeEvent.offsetX, e.nativeEvent.offsetY]);
 
     setIsDisplay((state) => !state);
     setIsAnswerDisplay(false);
   };
-  const handleOnChoose = () => {
-    console.log(`choose coordinate: ${coordinate[0]}`);
-    console.log(approximateCoordinates);
 
+  const handleOnChoose = () => {
+    // console.log(`choose coordinate: ${coordinate[0]}`);
+    // console.log(approximateCoordinates);
     if (coordinate && isContained(approximateCoordinates, coordinate[0])) {
-      // update end timer
       setIsDisplay((state) => !state);
       setIsAnswer(true);
       setIsAnswerDisplay(true);
-      // end
+
       (async () => {
         await axios.put('http://localhost:3000/endRecordPut', {
           id: params.id,
@@ -117,16 +110,14 @@ export const GamePage: FC<GamePageProps> = ({ title, imageUrl }) => {
       }
     })();
   };
+
   if (errors) return <div>{errors}</div>;
   if (isNavigate) return <Navigate to="/records" />;
+
   return (
     <Layout title={title}>
-      {' '}
       <Clock isStop={isEnded} />
       <div className="interact-container">
-        {
-          //* onclick  display logic
-        }
         {isEnded ? (
           <div className="form-wrapper modal">
             <form
