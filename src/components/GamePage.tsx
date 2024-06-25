@@ -162,7 +162,10 @@ export const GamePage: FC<GamePageProps> = ({ title, imageUrl }) => {
             >
               <button className="btn  bg-info-subtle" onClick={handleOnChoose}>
                 {' '}
-                <img src="http://localhost:3000/images/waldo.gif" alt="waldo" />
+                <img
+                  src="https://veil-selective-witch.glitch.me/images/waldo.gif"
+                  alt="waldo"
+                />
               </button>
             </div>
           </>

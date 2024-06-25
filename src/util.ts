@@ -66,27 +66,8 @@ export const useRecordFetch = (url: string) => {
 
         // sort by time from backend
         setData(res.data.records);
-      } catch (error: AxiosError | Error) {
-        if (error.response) {
-          // The request was made and the server responded with a status code
-          // that falls out of the range of 2xx
-          // console.log(error.response.data);
-          // console.log(error.response.status);
-          // console.log(error.response.headers);
-          setErrors(error.respond);
-        } else if (error.request) {
-          // The request was made but no response was received
-          // `error.request` is an instance of XMLHttpRequest in the
-          // browser and an instance of
-          // http.ClientRequest in node.js
-          console.log(error.request);
-          setErrors(error.request);
-        } else {
-          // Something happened in setting up the request that triggered an Error
-          console.log('Error', error.message);
-          setErrors(error.message);
-        }
-        console.log(error.config);
+      } catch (error) {
+        setErrors(error);
       } finally {
         setIsLoading(false);
       }

@@ -5,15 +5,16 @@ import { RecordProps, recordType } from '../typeDeclaration';
 import { useDeleteIncompleteRecords, useRecordFetch } from '../util';
 export const Record: FC<RecordProps> = () => {
   const { errors: deleteErrors } = useDeleteIncompleteRecords(
-    'http://localhost:3000/deleteIncompleteRecords'
+    'https://veil-selective-witch.glitch.me/IncompleteRecords'
   );
 
   const {
     isLoading,
     errors,
     data: records,
-  } = useRecordFetch('http://localhost:3000/records');
-
+  } = useRecordFetch('https://veil-selective-witch.glitch.me/records');
+  // errors here since we cannot render object
+  console.log(deleteErrors);
   if (deleteErrors) return <div>{deleteErrors}</div>;
   if (errors) return <div>{errors}</div>;
   if (isLoading) return <div> ...Loading</div>;
