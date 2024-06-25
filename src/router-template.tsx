@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './index.scss';
 
 import { Layout } from './components/Layout';
-import { nanoid, random } from 'nanoid';
+import { nanoid } from 'nanoid';
 
 const App = () => {
   const id = nanoid();

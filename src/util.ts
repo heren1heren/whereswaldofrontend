@@ -101,9 +101,8 @@ export const useFetch = (url: string, title: string) => {
 };
 
 export const useDeleteIncompleteRecords = (url: string) => {
-  //! loop
   const [errors, setErrors] = useState<unknown>();
-  const [finish, setFinish] = useState(false);
+
   useEffect(() => {
     // useEffect should only do one job -> refactor later
     (async () => {
@@ -111,13 +110,11 @@ export const useDeleteIncompleteRecords = (url: string) => {
         await axios.delete(url);
       } catch (error) {
         setErrors(error);
-      } finally {
-        setFinish(true);
       }
     })();
   });
 
-  return { errors, finish };
+  return { errors };
 };
 export const useStartRecord = (url: string, data: object) => {
   const [errors, setErrors] = useState<unknown>();

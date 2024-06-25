@@ -1,18 +1,17 @@
 _todo_
+follow TOP lesson to test
+React components
+: recordPage,
 
-deploy both front end and back end
-Layout is ready for a test
-generatingApproximateCoordinate is ready for a test file
+_laterTodo_
 useRecordFetch is ready for a test
 useFetch is ready for a test
 useDeleteIncompleteRecords is ready for a test
 useStartRecord is ready for a test
+//component test
+Layout is ready for a test
 Record Page is ready for a test file
 Clock component is ready for a test file
-
-<!-- implementing count up clock component from front end -->
-
-_laterTodo_
 
 _feature_:
 stop clock when user handleOn choose correctly

@@ -42,67 +42,67 @@ exports[`initializing home page test  > init 1`] = `
           >
             <a
               class="level-grid-item"
-              href="/gold/Xl5N1VqpeTgR-avVztH6D"
+              href="/gold/Z8wYseeTEkuZhG-G-kmt_"
             >
               <img
                 alt="where is waldo image"
                 class="img-template"
-                src="http://localhost:3000/images/gold.jpg"
+                src="https://veil-selective-witch.glitch.me/images/gold.jpg"
               />
               The Gold
             </a>
             <a
               class="level-grid-item"
-              href="/beach/Xl5N1VqpeTgR-avVztH6D"
+              href="/beach/Z8wYseeTEkuZhG-G-kmt_"
             >
               <img
                 alt="where is waldo image"
                 class="img-template"
-                src="http://localhost:3000/images/beach.jpg"
+                src="https://veil-selective-witch.glitch.me/images/beach.jpg"
               />
               The beach
             </a>
             <a
               class="level-grid-item"
-              href="/blue/Xl5N1VqpeTgR-avVztH6D"
+              href="/blue/Z8wYseeTEkuZhG-G-kmt_"
             >
               <img
                 alt="where is waldo image"
                 class="img-template"
-                src="http://localhost:3000/images/blue.jpg"
+                src="https://veil-selective-witch.glitch.me/images/blue.jpg"
               />
               The Blue
             </a>
             <a
               class="level-grid-item"
-              href="/maze/Xl5N1VqpeTgR-avVztH6D"
+              href="/maze/Z8wYseeTEkuZhG-G-kmt_"
             >
               <img
                 alt="where is waldo image"
                 class="img-template"
-                src="http://localhost:3000/images/maze.jpg"
+                src="https://veil-selective-witch.glitch.me/images/maze.jpg"
               />
               The Maze
             </a>
             <a
               class="level-grid-item"
-              href="/white/Xl5N1VqpeTgR-avVztH6D"
+              href="/white/Z8wYseeTEkuZhG-G-kmt_"
             >
               <img
                 alt="where is waldo image"
                 class="img-template"
-                src="http://localhost:3000/images/white.jpg"
+                src="https://veil-selective-witch.glitch.me/images/white.jpg"
               />
               The White
             </a>
             <a
               class="level-grid-item"
-              href="/space/Xl5N1VqpeTgR-avVztH6D"
+              href="/space/Z8wYseeTEkuZhG-G-kmt_"
             >
               <img
                 alt="where is waldo image"
                 class="img-template"
-                src="http://localhost:3000/images/space.jpg"
+                src="https://veil-selective-witch.glitch.me/images/space.jpg"
               />
               The Space
             </a>
@@ -161,67 +161,67 @@ exports[`initializing home page test  > init 1`] = `
         >
           <a
             class="level-grid-item"
-            href="/gold/Xl5N1VqpeTgR-avVztH6D"
+            href="/gold/Z8wYseeTEkuZhG-G-kmt_"
           >
             <img
               alt="where is waldo image"
               class="img-template"
-              src="http://localhost:3000/images/gold.jpg"
+              src="https://veil-selective-witch.glitch.me/images/gold.jpg"
             />
             The Gold
           </a>
           <a
             class="level-grid-item"
-            href="/beach/Xl5N1VqpeTgR-avVztH6D"
+            href="/beach/Z8wYseeTEkuZhG-G-kmt_"
           >
             <img
               alt="where is waldo image"
               class="img-template"
-              src="http://localhost:3000/images/beach.jpg"
+              src="https://veil-selective-witch.glitch.me/images/beach.jpg"
             />
             The beach
           </a>
           <a
             class="level-grid-item"
-            href="/blue/Xl5N1VqpeTgR-avVztH6D"
+            href="/blue/Z8wYseeTEkuZhG-G-kmt_"
           >
             <img
               alt="where is waldo image"
               class="img-template"
-              src="http://localhost:3000/images/blue.jpg"
+              src="https://veil-selective-witch.glitch.me/images/blue.jpg"
             />
             The Blue
           </a>
           <a
             class="level-grid-item"
-            href="/maze/Xl5N1VqpeTgR-avVztH6D"
+            href="/maze/Z8wYseeTEkuZhG-G-kmt_"
           >
             <img
               alt="where is waldo image"
               class="img-template"
-              src="http://localhost:3000/images/maze.jpg"
+              src="https://veil-selective-witch.glitch.me/images/maze.jpg"
             />
             The Maze
           </a>
           <a
             class="level-grid-item"
-            href="/white/Xl5N1VqpeTgR-avVztH6D"
+            href="/white/Z8wYseeTEkuZhG-G-kmt_"
           >
             <img
               alt="where is waldo image"
               class="img-template"
-              src="http://localhost:3000/images/white.jpg"
+              src="https://veil-selective-witch.glitch.me/images/white.jpg"
             />
             The White
           </a>
           <a
             class="level-grid-item"
-            href="/space/Xl5N1VqpeTgR-avVztH6D"
+            href="/space/Z8wYseeTEkuZhG-G-kmt_"
           >
             <img
               alt="where is waldo image"
               class="img-template"
-              src="http://localhost:3000/images/space.jpg"
+              src="https://veil-selective-witch.glitch.me/images/space.jpg"
             />
             The Space
           </a>
