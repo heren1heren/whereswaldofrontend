@@ -28,10 +28,10 @@ export const GamePage: FC<GamePageProps> = ({ title, imageUrl }) => {
     isLoading,
     data: coordinateData,
     errors,
-  } = useFetch('http://localhost:3000/coordinates', title);
+  } = useFetch('https://veil-selective-witch.glitch.me/coordinates', title);
 
   const { errors: startRecordErrors } = useStartRecord(
-    `http://localhost:3000/startRecord`,
+    `https://veil-selective-witch.glitch.me/startRecord`,
     {
       map: title,
       id: params.id,
@@ -78,7 +78,7 @@ export const GamePage: FC<GamePageProps> = ({ title, imageUrl }) => {
       setIsAnswerDisplay(true);
 
       (async () => {
-        await axios.put('http://localhost:3000/endRecord', {
+        await axios.put('https://veil-selective-witch.glitch.me/endRecord', {
           id: params.id,
         });
       })();
@@ -99,10 +99,13 @@ export const GamePage: FC<GamePageProps> = ({ title, imageUrl }) => {
 
     (async () => {
       try {
-        await axios.put('http://localhost:3000/usernameRecord', {
-          username: input,
-          id: params.id,
-        });
+        await axios.put(
+          'https://veil-selective-witch.glitch.me/usernameRecord',
+          {
+            username: input,
+            id: params.id,
+          }
+        );
       } catch (error) {
         console.log(error);
       } finally {

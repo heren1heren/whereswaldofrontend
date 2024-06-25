@@ -15,7 +15,7 @@ const App = () => {
         <Link className="level-grid-item" to={`gold/${id}`}>
           <img
             className="img-template"
-            src="http://localhost:3000/images/gold.jpg"
+            src="https://veil-selective-witch.glitch.me/images/gold.jpg"
             alt="where is waldo image"
           />
           The Gold
@@ -23,7 +23,7 @@ const App = () => {
         <Link className="level-grid-item" to={`beach/${id}`}>
           <img
             className="img-template"
-            src="http://localhost:3000/images/beach.jpg"
+            src="https://veil-selective-witch.glitch.me/images/beach.jpg"
             alt="where is waldo image"
           />
           The beach
@@ -31,7 +31,7 @@ const App = () => {
         <Link className="level-grid-item" to={`blue/${id}`}>
           <img
             className="img-template"
-            src="http://localhost:3000/images/blue.jpg"
+            src="https://veil-selective-witch.glitch.me/images/blue.jpg"
             alt="where is waldo image"
           />
           The Blue
@@ -39,7 +39,7 @@ const App = () => {
         <Link className="level-grid-item" to={`maze/${id}`}>
           <img
             className="img-template"
-            src="http://localhost:3000/images/maze.jpg"
+            src="https://veil-selective-witch.glitch.me/images/maze.jpg"
             alt="where is waldo image"
           />
           The Maze
@@ -47,7 +47,7 @@ const App = () => {
         <Link className="level-grid-item" to={`white/${id}`}>
           <img
             className="img-template"
-            src="http://localhost:3000/images/white.jpg"
+            src="https://veil-selective-witch.glitch.me/images/white.jpg"
             alt="where is waldo image"
           />
           The White
@@ -55,7 +55,7 @@ const App = () => {
         <Link className="level-grid-item" to={`space/${id}`}>
           <img
             className="img-template"
-            src="http://localhost:3000/images/space.jpg"
+            src="https://veil-selective-witch.glitch.me/images/space.jpg"
             alt="where is waldo image"
           />
           The Space
